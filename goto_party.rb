@@ -9,13 +9,20 @@ celeb_schedule = [
   {from: 6, to: 9, name: 'Matz'}
 ]
 
+def celebrityDensity
+  
+end
+
 def bestTimeToParty(schedule)
   start = schedule[0][:from]
   finish = schedule[0][:to]
 
   schedule.each do |c|
-    start = [c[:from], start].min
-    finish = [c[:to], finish].max
+    start = (c[:from] < start ? c[:from] : start)
+    finish = (c[:to] < finish ? finish : c[:to])    
   end
 
+  count = celebrityDensity(schedule, start, finish)
+  maxcount = count[start..(finish+1)].max
+  t = count.index(count[start..(finish+1)].max)
 end
