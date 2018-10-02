@@ -37,3 +37,5 @@ def bestTimeToParty(schedule)
 
   puts "Best time to attend the party is at #{t} o'clok : #{maxcount} celebrities will be attending!"
 end
+
+bestTimeToParty(celeb_schedule)
