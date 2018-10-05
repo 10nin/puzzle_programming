@@ -6,3 +6,14 @@ def generate_deck
     nums.map{ |n| n.to_s + m }
   end
 end
+
+def assistantOrdersCards(deck)
+  puts 'Cards are character strings as shown below.'
+  puts "Ordering is: #{deck}"
+  cards, cind, cardsuites, cnumbers = [], [], [], []
+  numsuites = [0, 0, 0, 0]
+  (0..4).each do |i|
+    puts "Please give card #{i+1}"
+  end
+end
+  
